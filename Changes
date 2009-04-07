@@ -1,5 +1,8 @@
 Revision history for Perl extension WebService::TVRage.
 
+0.011
+	- Fixed type is POD for the Show module
+
 0.01  Sun Apr  5 11:04:34 2009
 	- original version; created by h2xs 1.23 with options
 		-AX WebService::TVRage

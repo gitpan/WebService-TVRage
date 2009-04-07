@@ -55,7 +55,7 @@ sub getGenres {
 
 =head1 NAME
 
-WebService::TVRage::Show- Object returned by WebService::TVRage::ShowList->getShow(), Contains details for the requested show title 
+WebService::TVRage::Show Object returned by WebService::TVRage::ShowList->getShow(), Contains details for the requested show title 
 
 =head1 SYNOPSIS
    
