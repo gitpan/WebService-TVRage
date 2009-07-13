@@ -32,7 +32,8 @@ sub getEpisode {
 	my $season = shift;
 	my $episode = shift;
 	$episode--; $season--;
-	my $object =  WebService::TVRage::Episode->new();	
+	my $object =  WebService::TVRage::Episode->new();
+	return undef unless defined $self->_episodeListHash()->{Episodelist}{Season}[$season]{episode}[$episode];	
 	$object->_episodeHash($self->_episodeListHash()->{Episodelist}{Season}[$season]{episode}[$episode]);
 	return $object;
 }

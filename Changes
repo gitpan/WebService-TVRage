@@ -1,5 +1,8 @@
 Revision history for Perl extension WebService::TVRage.
 
+0.1
+	- Fixed some of the XML parsing that would error out if there was only a single entry.  Also made it so request that return new TVRage objects return undef if they fail.  Thanks to Geoffrey Hoffman <hoffy@hoffyland.com> for making me aware of the bugs as well as providing fixes!
+
 0.011
 	- Fixed type is POD for the Show module
 

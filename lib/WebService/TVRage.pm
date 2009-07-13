@@ -4,7 +4,7 @@ use 5.010000;
 use strict;
 use warnings;
 
-our $VERSION = '0.011';
+our $VERSION = '0.1';
 
 
 
@@ -37,7 +37,7 @@ WebService::TVRage - Perl extension for using TVRage's XML Service
 
 =head1 DESCRIPTION
 
-This module itself doesn't do anything, just a place holder so you can install will 'WebService::TVRage' See the objects for their various functions.
+This module itself doesn't do anything, just a place holder so you can install will 'WebService::TVRage' See the objects for their various functions.  The convention of this module is that if requests fail, they return empty strings when strings are requested and undef when objects are requested.
 
 =head1 AUTHOR
 

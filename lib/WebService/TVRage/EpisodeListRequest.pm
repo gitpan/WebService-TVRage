@@ -25,8 +25,9 @@ sub getEpisodeList {
 	my $episodeListResponse = $uA->request($episodeListReq);
 	print $episodeListResponse->error_as_HTML unless $episodeListResponse->is_success;
 	my $xml = new XML::Simple;
-	my $processedXML = $xml->XMLin( $episodeListResponse->decoded_content);
-	#print Dumper($processedXML->{Episodelist}{Season}[0]{episode}[0]);
+	my $processedXML = $xml->XMLin( $episodeListResponse->decoded_content, (ForceArray => ['Season', 'episode']));
+	#return undef if ref $processedXML->{name};
+    return undef unless defined $processedXML->{Episodelist};
 	my $object = WebService::TVRage::EpisodeList->new();
 	$object->_episodeListHash($processedXML);
     return $object;

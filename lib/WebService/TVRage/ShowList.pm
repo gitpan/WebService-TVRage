@@ -26,7 +26,7 @@ sub getShow {
 	my $self = shift;
 	my $showTitle = shift;
 	my $object = WebService::TVRage::Show->new();
-	#Dumper($self->_showListHash());
+	return undef unless defined $self->_showListHash()->{show}{$showTitle};
 	$object->_showHash( $self->_showListHash()->{show}{$showTitle} );
 	return $object;
 }

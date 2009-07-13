@@ -28,7 +28,8 @@ sub search {
 	my $showSearchResponse = $uA->request($showSearchReq);
 	print $showSearchResponse->error_as_HTML unless $showSearchResponse->is_success;
 	my $xml = new XML::Simple;
-	my $processedXML = $xml->XMLin( $showSearchResponse->decoded_content);
+	my $processedXML = $xml->XMLin( $showSearchResponse->decoded_content, (ForceArray => ['show']));
+	return undef if $processedXML == 0;
 	my $object = WebService::TVRage::ShowList->new();
 	$object->_showListHash($processedXML);
     return $object;
