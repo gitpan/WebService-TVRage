@@ -22,7 +22,8 @@ sub getNumSeasons {
 sub getNumEpsInSeason {
 	my $self = shift;
 	my $season = shift;
-	$season += 1;
+	$season -= 1;
+	return 0 unless defined $self->_episodeListHash()->{Episodelist}{Season}[$season];
 	my $noEps =  @{$self->_episodeListHash()->{Episodelist}{Season}[$season]{episode}} // '';
 	return $noEps;
 }

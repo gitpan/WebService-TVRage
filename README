@@ -1,4 +1,4 @@
-WebService-TVRage version 0.01
+WebService-TVRage version 0.11
 ==============================
 
 WebService-TVRage is an OO module that uses TVRage's XML service to get information about shows and their episodes 
